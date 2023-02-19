@@ -1,0 +1,173 @@
+.movie_poster{
+    height: auto;
+    width: 100%;
+}
+.row{
+    overflow-y: hidden;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+}
+.row::-webkit-scrollbar{
+    display: none;
+}
+.rows{
+    padding-left: 3rem;
+    overflow-x: hidden;
+}
+.rows h2{
+    color: white;
+}
+.poster_holder{
+    cursor: pointer;
+    box-shadow: none;
+    transform: scale(1);
+    transition: all 0.2s;
+}
+.poster_holder:hover{
+    transform: scale(1.1);
+    box-shadow: rgba(255,255,255,0.6) 0px 0px 12px;
+}
+.smallRow{
+    width: 12%;
+}
+.banner_container{
+    height: 65vh;
+    object-fit: contain;
+    color: white;
+}
+.banner_content{
+    padding-left: 4rem;
+    padding-top: 8rem;
+    width: 45rem;
+}
+.banner_content h1{
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 0.3rem;
+}
+.banner_content p{
+    /*width: 45rem;*/
+    line-height: 1.3;
+    padding-top: 1rem;
+    font-size: 0.91rem;
+    max-width: 360px;
+   /* height: 80px;*/
+}
+.banner_content button{
+    color: white;
+    outline: none;
+    border: navajowhite;
+    font-weight: 700;
+    border-width: 0.2vw;
+    padding: 0.5rem 2rem;
+    background-color: rgba(79,76,77,0.6);
+    transition: all 0.2s;
+}
+.banner_content button:hover{
+    color: black;
+    background-color: #e6e6e6;
+}
+.banner_content i{
+    font-size: 1.3rem;
+    margin-right: 0.2rem;
+}
+.banner_bottom_shadow_effect{
+    height: 7.4rem;
+    background-image: linear-gradient(180deg,transparent,rgba(37,37,37,0.61),#111);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}
+.nav{
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    display: block!important;
+    background-color: transparent;
+    transition-timing-function: ease-in;
+    transition: all 0.4s;
+}
+.nav_black{
+    background-color: #111;
+}
+.avatar{
+    width: 4rem;
+    height: auto;
+    position: fixed;
+    right: 0;
+}
+.brand_logo{
+    width: 7.5rem;
+    height: auto;
+}
+.modal-dialog{
+    max-width: 70%!important;
+}
+.modal-content{
+    height: auto;
+    width: 100%;
+    background-color: #111;
+    color: white;
+}
+.modal-body iframe{
+    width: 100%;
+}
+.bigRow{
+    width: 17%;
+}
+@media (max-width:1200px){
+    .smallRow{
+        width: 16%;
+    }
+    .bigRow{
+        width: 21%;
+    }
+}
+@media (max-width:992px){
+    .smallRow{
+        width: 21%;
+    }
+    .bigRow{
+        width: 26%;
+    }
+}
+@media (max-width:768px){
+    .banner_content {
+        padding-left: 3rem;
+        width: 80%;
+    }
+    .smallRow{
+        width: 27%;
+    }
+    .bigRow{
+        width: 32%;
+    }
+    .rows{
+        padding-left: 1.5rem;
+    }
+}
+@media (max-width:576px){
+    .banner_content {
+        padding-left: 1.5rem;
+        width: 100%;
+    }
+    .banner_content .row{
+        width: 100%;
+    }
+    .banner_content h1 {
+        font-size: 2.1rem;
+    }
+    .smallRow{
+        width: 33%;
+    }
+    .bigRow{
+        width: 39%;
+    }
+    .rows{
+        padding-left: 1.5rem;
+    }
+}
+@media (max-width:400px){
+}
