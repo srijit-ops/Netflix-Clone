@@ -23,12 +23,8 @@ function Row({title, fetchUrl,isLargeRow}) {
   const handleClose = () => setShow(false);
 
    async function handleShow(film){
-    console.log(film)
-    console.log(getURLParams(film))
     const URLSearchParam= await getURLParams(film)
-    console.log(URLSearchParam)
     if(URLSearchParam){
-    
     setTrailerURL(URLSearchParam.get("v")) 
     setShow(true);
     } else
@@ -47,7 +43,6 @@ function Row({title, fetchUrl,isLargeRow}) {
             )
           })}
         </div>
-        
         {trailerURL && <Trailermodal show={show} handleClose={handleClose} trailerURL={trailerURL}/>}
     </div>
   )

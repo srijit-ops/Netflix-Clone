@@ -1,0 +1,1 @@
+### Netflix clone made with React JS which can show tarilers from YouTube. (Wanna see the full movie? Get a netflix subscription dude!!) ###

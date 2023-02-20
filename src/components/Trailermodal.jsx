@@ -26,7 +26,6 @@ function Trailermodal({show, handleClose,trailerURL}) {
           </Button>
         </Modal.Footer>
       </Modal>
-      {console.log("infinite")}
     </>
   )
 }
