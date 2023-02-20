@@ -1,15 +1,12 @@
-import Row from "./Row"
-import Banner from "./Banner"
-import Nav from "./Nav"
-import requests from "./requests"
-import { useContext } from "react"
-import TrailerContext from "./TrailerContext"
+import React from 'react'
+import Row from "./components/Row"
+import Banner from "./components/Banner"
+import Nav from "./components/Nav"
+import requests from "./functionalities/requests"
 function App() {
-  const item=useContext(TrailerContext)
   return (
     <div className="App">
       <Nav/>
-      {console.log(item)}
       <Banner/>
       {
         requests.map((item)=>{
