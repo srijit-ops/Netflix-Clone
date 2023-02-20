@@ -13,7 +13,7 @@ body{
   background: #111;
 }
 .movie_poster{
-  height: auto;
+  height: 100%;
   width: 100%;
 }
 .row{
