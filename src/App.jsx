@@ -1,32 +1,37 @@
-import React, {useEffect,useState} from 'react'
-import { auth } from './firebase'
+import React, { useEffect } from 'react'
 import {
   BrowserRouter as Router,
   Routes,
-  Route
+  Route,
+  useNavigate
 } from "react-router-dom"
 import Home from './pages/Home'
 import Loginpage from './pages/Loginpage'
+import { auth } from './firebase'
 function App() {
-  const [authenticated,setaAuthenticated] = useState(false)
-  /*useEffect(() => {
-   const unsubscribe= auth.onAuthStateChanged(userAuth=>{
-      if(userAuth){
-        console.log(userAuth) //already logged in
-      } else{
-        //logged out
+const navigate = useNavigate()
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(user => {
+      if (user) {
+        localStorage.setItem('user', JSON.stringify({ email: user.email })) 
+        navigate("/home")
+      } else {
+        localStorage.clear()
+        navigate("/")
       }
     })
     return unsubscribe
   }, [])
-  */
-  
+
+
   return (
     <div className="App">
-    <Routes>
-    <Route path='/' element={<Loginpage setaAuthenticated={setaAuthenticated}/>}></Route> 
-    <Route path='/home' element={<Home/>}></Route> 
-    </Routes>
+      <Routes>
+        <Route path='/' element={<Loginpage />}></Route>
+        <Route path='/home' element={
+          <Home />
+       }></Route>
+      </Routes>
     </div>
   )
 }

@@ -12,6 +12,11 @@
 body{
   background: #111;
 }
+.logout{
+  width:8%;
+  background-color: #e50914;
+    border-radius: 4px;
+}
 .movie_poster{
   height: 100%;
   width: 100%;
@@ -69,6 +74,12 @@ body{
   font-size: 0.91rem;
   max-width: 360px;
 }
+.login_nav{
+  width:100%;
+  position: fixed;
+    top: 0;
+    right:0;
+}
 .banner_content button{
   color: white;
   outline: none;
@@ -108,11 +119,8 @@ body{
 .nav_black{
   background-color: #111;
 }
-.avatar{
-  width: 4rem;
-  height: auto;
-  position: fixed;
-  right: 0;
+button:active{
+  transform: scale(0.95);
 }
 .brand_logo{
   width: 7.5rem;
@@ -152,12 +160,17 @@ body{
     top: 28%;
     color: white;
     text-align: center;
-    padding: 40px;
-    background-color: rgba(0,0,0,0.8);
+    /*padding: 40px;
+    background-color: rgba(0,0,0,0.8);*/
 top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-width: 650px;
+/*width: 650px;*/
+}
+@media (max-width:1400px){
+  .login_nav{
+    width: auto;
+  }
 }
 @media (max-width:1200px){
   .smallRow{
@@ -173,6 +186,12 @@ width: 650px;
   }
   .bigRow{
       width: 26%;
+  }
+  .logout{
+    width: 12%;
+  }
+  .get_started{
+    width: 40rem;
   }
 }
 @media (max-width:768px){
@@ -191,6 +210,15 @@ width: 650px;
   }
   .modal-dialog {
       max-width: 90%!important;
+  }
+  .logout{
+    width: 15%;
+  }
+  .get_started{
+    width: 30rem;
+  }
+  .signin_form{
+    width: 30rem!important;
   }
   }
 @media (max-width:576px){
@@ -213,9 +241,6 @@ width: 650px;
   .rows h2, .movie_row {
       padding-left: 1rem;
   }
-  .avatar {
-      width: 3.5rem;
-  }
   .brand_logo {
       width: 6rem;
   }
@@ -223,14 +248,28 @@ width: 650px;
       max-width: 100%!important;
       margin: auto!important;
   }
-  
+  .logout{
+    width: 20%;
+  }
+  .signin{
+    font-size: 0.8rem;
+  }
+  .get_started{
+    width: 23rem;
+  }
+  .get_started h1{
+    font-size: 1.6rem;
+  }
+  .get_started h4{
+    font-size: 1rem;
+  }
+  .signin_form {
+    width: 23rem!important;
+}
 }
 @media (max-width:400px){
   .brand_logo {
       width: 5rem;
-  }
-  .avatar {
-      width: 3rem;
   }
   .banner_content {
       padding-left: 1rem;
@@ -261,5 +300,30 @@ width: 650px;
   .bigRow {
       width: 46%;
   }
+  .logout{
+    width: 23%;
+    font-size: 0.77rem;
+  }
+  .netflix_logo{
+    width: 25%!important;
+  }
+  .get_started{
+    width: 18rem;
+  }
+  .get_started button{
+    font-size: 0.8rem;
+  }
+  .get_started h1{
+    font-size: 1.3rem;
+  }
+  .get_started h4{
+    font-size: 0.9rem;
+  }
+  .get_started h4{
+    font-size: 0.85rem;
+  }
+  .signin_form {
+    width: 18rem!important;
+}
 }
 
